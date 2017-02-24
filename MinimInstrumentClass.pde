@@ -5,7 +5,7 @@ Minim minim;
 AudioOutput out;
 
 //Store an array list with the tones of a C Major scale
-String[] cMajorTones = {"C3", "E3", "G3", "C4", "E4", "G4", "C5", "E5", "G5", "C6", "E6"}; 
+String[] cMajorTones = {"C3", "E3", "G3", "C4", "E4", "G4", "C5", "E5", "G5", "C6", "E6"};
 
 int currNote = 0;
 
@@ -27,11 +27,11 @@ void draw(){
    */
   out.playNote(0, 2, new SineInstrument ( Frequency.ofPitch( cMajorTones[currNote] ).asHz()) );
   delay(200);
-  
+  //what is the save key
   if (currNote < cMajorTones.length - 1){
-    currNote ++;
+    currNote += 2;
   }
   else{
-   currNote = 0; 
+   currNote = 0;
   }
 }
