@@ -27,7 +27,7 @@ void draw(){
    */
   out.playNote(0, 2, new SineInstrument ( Frequency.ofPitch( cMajorTones[currNote] ).asHz()) );
   delay(200);
-  //what is the save key
+
   if (currNote < cMajorTones.length - 1){
     currNote += 2;
   }
